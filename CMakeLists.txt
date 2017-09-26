@@ -1,7 +1,8 @@
 # TEMPLATE SOURCE: https://github.com/bast/cmake-example/blob/master/CMakeLists.txt
 
 # Stop if cmake version below 3.5:
-cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
+#cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.2 FATAL_ERROR)
 
 # Detect host processor:
 message(STATUS "The host processor is ${CMAKE_HOST_SYSTEM_PROCESSOR}")
