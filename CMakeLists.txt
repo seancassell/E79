@@ -18,7 +18,7 @@ set(CMAKE_CXX_STANDARD 14)
 
 # Enable compiler-specific features:
 if (MSVC)
-	add_compile_options(/W4)
+	add_compile_options(/W4 /GA /Bv /J)
 else()
 	add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
