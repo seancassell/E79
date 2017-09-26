@@ -1,0 +1,1 @@
+g++ cmake_intro.cpp -O0 -m64 -std=c++14 -o e78.exe
