@@ -1,30 +1,7 @@
-# Adapted from: https://www.appveyor.com/docs/appveyor-yml/
-#
-# Notes:
-#   - Minimal appveyor.yml file is an empty file. All sections are optional.
-#   - Indent each level of configuration with 2 spaces. Do not use tabs!
-#   - All section names are case-sensitive.
-#   - Section names should be unique on each level.
-
-
-#---------------------------------#
-#      General configuration      #
-#---------------------------------#
-# Version format:
 version: 1.0.{build}
-
-# Image:
 image:
   - Visual Studio 2017
-
-# Clone directory:
 clone_folder: c:\projects\source
-
-
-#---------------------------------#
-#       Build configuration       #
-#---------------------------------#
-# Build script:
 build_script:
 - cmd: >-
   mkdir build
@@ -34,33 +11,14 @@ build_script:
   cmake c:\projects\source -G "Visual Studio 15"
   
   cmake --build . --config "Debug"
-
-# Build platform, i.e. x86, x64, Any CPU (optional):
 platform: x64
-
-# Build Configuration, i.e. Debug, Release, etc.:
 configuration: Debug
 build:
   parallel: true
-
-# MSBuild verbosity level:
 verbosity: normal
-
-
-#---------------------------------#
-#      Artifacts configuration    #
-#---------------------------------#
 artifacts:
-  # Pushing a single file
-  #- path: E79.zip
   path: E79.zip
-
-
-#---------------------------------#
-#     Deployment configuration    #
-#---------------------------------#
 deploy:
-  # Deploy to GitHub Releases:
   provider: GitHub
   artifact: E79.zip
   draft: false
